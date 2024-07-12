@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GS Image Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">  GS Images</h1>
+        <div class="theme-toggle">
+            <label class="switch">
+                <input type="checkbox" id="theme-switch">
+                <span class="slider"></span>
+            </label>
+            <span class="mode-label"></span>
+        </div>
+    </header>
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search here to search...">
+            <select id="orientation-select">
+                <option value="">All Orientations</option>
+                <option value="landscape">Landscape</option>
+                <option value="portrait">Portrait</option>
+            </select>
+            <select id="sort-select">
+                <option value="relevant">Relevance</option>
+                <option value="latest">Latest</option>
+            </select>
+            <button id="search-button">Search</button>
+        </div>
+        <div id="results" class="results"></div>
+        <button id="load-more-button" style="display: none;">Load More</button>
+    </div>
+    <div class="image-processing">
+        <h2>Image Processing</h2>
+        <input type="file" id="upload-input" accept="image/*">
+        <input type="number" id="size-input" placeholder="Enter new size in pixels">
+        <button id="process-button" class="process-button">Resize Image</button>
+        <button id="black-white-button" class="process-button">Black & White</button>
+        <button id="compress-button" class="process-button">Compress Image</button>
+        <a id="download-link" href="#" download="processed_image.png" class="download-link">Download Processed Image</a>
+        <canvas id="image-canvas" style="display: none;"></canvas>
+        <div id="progress" class="progress">Processing...</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
